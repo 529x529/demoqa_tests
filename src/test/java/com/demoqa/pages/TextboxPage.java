@@ -22,6 +22,11 @@ public class TextboxPage {
     public TextboxPage openPage() {
         open("/text-box");
         $(".main-header").shouldHave(text("Text Box"));
+
+        return this;
+    }
+
+    public TextboxPage removeJsElements() {
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
 

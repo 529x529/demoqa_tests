@@ -7,6 +7,7 @@ public class RegistrationWithPageObjectsTests extends TestBase {
     @Test
     void successfulRegistrationTest() {
         registrationPage.openPage()
+                .removeJsElements()
                 .setFirstName("Mikhail")
                 .setLastName("Rezchikov")
                 .setUserEmail("test@test.com")

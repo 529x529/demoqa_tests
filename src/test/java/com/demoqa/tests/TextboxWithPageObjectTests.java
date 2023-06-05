@@ -8,6 +8,7 @@ public class TextboxWithPageObjectTests extends TestBase{
     void successTest() {
 
         textboxPage.openPage()
+                .removeJsElements()
                 .setUserName("Mikhail Rezchikov")
                 .setUserEmail("test@test.com")
                 .setCurrentAddress("Some address 1")
