@@ -2,11 +2,10 @@ package com.demoqa.tests;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
+import static io.qameta.allure.Allure.step;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-
-import static com.codeborne.selenide.logevents.SelenideLogger.step;
 
 public class RegistrationWithFakerTests extends TestBase {
 
@@ -15,7 +14,6 @@ public class RegistrationWithFakerTests extends TestBase {
     @DisplayName("Проверка успешной регистрации")
     void successfulRegistrationTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
-
         step("Заполнение формы регистрации", () -> {
             registrationPage.openPage()
                     .removeJsElements()
