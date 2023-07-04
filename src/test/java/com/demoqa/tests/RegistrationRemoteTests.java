@@ -42,8 +42,7 @@ public class RegistrationRemoteTests extends RemoteTestBase {
                     .checkEnteredResult("Hobbies", registrationTestData.randomHobbie)
                     .checkEnteredResult("Picture", registrationTestData.picture)
                     .checkEnteredResult("Address", registrationTestData.randomCurrentAdress)
-                    .checkEnteredResult("State and City", String.format("%s %s", registrationTestData.randomState, registrationTestData.randomCity))
-                    .closeTableResponsive();
+                    .checkEnteredResult("State and City", String.format("%s %s", registrationTestData.randomState, registrationTestData.randomCity));
         });
     }
 }
