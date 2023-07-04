@@ -7,7 +7,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-public class RegistrationWithFakerTests extends TestBase {
+public class RegistrationWithFakerTests extends RemoteTestBase {
 
     @Test
     @Tag("remote")
