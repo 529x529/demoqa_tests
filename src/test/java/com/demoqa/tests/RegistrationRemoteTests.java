@@ -14,7 +14,6 @@ public class RegistrationRemoteTests extends RemoteTestBase {
     @Tag("remote")
     @DisplayName("Проверка успешной регистрации")
     void successfulRegistrationTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
         step("Заполнение формы регистрации", () -> {
             registrationPage.openPage()
                     .removeJsElements()
@@ -32,7 +31,6 @@ public class RegistrationRemoteTests extends RemoteTestBase {
                     .setCity(registrationTestData.randomCity)
                     .clickSubmitBtn();
         });
-
         step("Проверка корректности заполнения формы регистрации", () -> {
             registrationPage
                     .checkEnteredResult("Student Name", String.format("%s %s", registrationTestData.randomFirstName, registrationTestData.randomLastName))
