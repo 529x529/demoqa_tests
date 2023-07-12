@@ -36,7 +36,6 @@ dependencies {
             "org.slf4j:slf4j-simple:${slf4jVersion}",
             "com.github.javafaker:javafaker:${fakerVersion}",
             "io.qameta.allure:allure-selenide:${allureVersion}",
-            'org.aspectj:aspectjweaver:1.6.5'
     )
 }
 
